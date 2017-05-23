@@ -25,13 +25,27 @@ class GingerCooky < Cooky
     end
 end
 
+class Cupcake < Cooky
+    def initialize(pastre, topping, stuff, berry)
+        super(pastre, topping, stuff)
+        @berry = berry
+    end
+    def getCooky
+        "New! Sweet #{@pastre} cupcake, #{@topping} on top and #{@berry} in every item"
+    end
+end
+        
+
 choc = ChocolateCooky.new("puff pastry", "chocolate", "strawberry jam")
 puts choc.getCooky
 
 coco = CoconutCooky.new("sweet waffles", "coconut flakes", "vanilla cream")
 puts coco.getCooky
 
-ginger = GingerCooky.new("shortcrast", "sugar powder", "peaces of fruits")
+ginger = GingerCooky.new("shortcrast", "sugar powder", "pieces of fruits")
 puts ginger.getCooky
+
+cupcake = Cupcake.new("bakery", "cream", "", "cherry")
+puts cupcake.getCooky
 
     
